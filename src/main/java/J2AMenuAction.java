@@ -46,7 +46,17 @@ public class J2AMenuAction extends AnAction {
     }
 
     private String convertToArray(String text) {
-        return "";
+        String json = new JSONObject(text).toString(4);
+
+        String assocArray = json
+                .replaceAll("\\{", "[")
+                .replaceAll("}", "]")
+                .replaceAll("\"\\s*:", "\" =>");
+        if(assocArray.contains("[[")) {
+            assocArray = assocArray.replaceAll("\\[\\s*\\[", "[ \"KEY\" => [").replaceAll("],\\s*\\[", "],\"KEY\" => [");
+        }
+        System.out.println(assocArray);
+        return assocArray;
     }
 
     /**

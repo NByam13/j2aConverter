@@ -14,11 +14,6 @@
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
-        <action id="VehiklPopupDialogAction" class="PopupDialogAction" text="Vehikl Popup Dialog Action"
-                description="It&#39;s Vehikl&#39;s popup dialog action!">
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
-        </action>
         <action id="J2AMenuAction" class="J2AMenuAction" text="JSON to Array Super Converter"
                 description="Read the name">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>

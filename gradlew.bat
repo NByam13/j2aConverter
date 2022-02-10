@@ -87,7 +87,3 @@ exit /b 1
 if "%OS%"=="Windows_NT" endlocal
 
 :omega
-
-editor_basics
-
-{1:"hui",2:{3:4,"hi":"myman"}}
