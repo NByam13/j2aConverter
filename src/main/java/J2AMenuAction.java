@@ -53,9 +53,10 @@ public class J2AMenuAction extends AnAction {
                 .replaceAll("}", "]")
                 .replaceAll("\"\\s*:", "\" =>");
         if(assocArray.contains("[[")) {
-            assocArray = assocArray.replaceAll("\\[\\s*\\[", "[ \"KEY\" => [").replaceAll("],\\s*\\[", "],\"KEY\" => [");
+            assocArray = assocArray
+                    .replaceAll("\\[\\s*\\[", "[ \"KEY\" => [")
+                    .replaceAll("],\\s*\\[", "],\"KEY\" => [");
         }
-        System.out.println(assocArray);
         return assocArray;
     }
 
